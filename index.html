@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">        
+    </head>
+    <body>
+        <div class="atmContainer">
+        <div class="popUp">
+            <div class="welcomePage"><h1> Welcome</h1></div>
+            <div class="imageDiv"></div>
+            <div class="inputBtn">
+                <input type="number" id="pinInput" placeholder="Enter Pin Number...." disabled="true"><br>
+                <button id = "pinBtn" onclick="okClick()" disabled="true"><strong>OK</strong></button>
+                
+            </div>
+        </div>        
+         <!-- <div class="navColor"></div>  -->
+            <div class="screen">            
+                <div class="leftNavBar"></div>       
+                <div class="mainContainer">
+                    <!-- <div class="navColor"></div> -->
+                       
+                    <div class="leftmenuBar"></div>
+                    <div class="displayArea">
+                        <div class="content">
+                            <!-- <h1> Select a Transaction</h1> -->
+                        </div> 
+                        <div class="displayTransaction">
+                            <div class="transactionContent"></div> 
+                            <div class="allTransaction">
+                                <input type="number" id="allTransactionText" oninput="limitAmount(this)" hidden="false">
+                            </div> 
+                            <div class="transactionButton">
+                                <button type="submit" id ="transactionButtonID" hidden="false" onclick="btnOkClick()">OK</button>
+                            </div> 
+                            <div class="remainingAmount" hidden="false">
+                                <label id="lblRemainingAmount"></label>
+                            </div>                         
+                        </div>
+                    </div>
+                    <div class="rightmenuBar"></div>
+                </div>
+                <div class="rightNavBar"></div>
+            </div>
+        
+        <div class="keyPad">
+            <div class="rowOne">
+              <div onclick="onNumPadClick(1)" class="keys">1</div>
+              <div onclick="onNumPadClick(2)" class="keys">2</div>
+              <div onclick="onNumPadClick(3)" class="keys">3</div>
+            </div>
+    
+            <div class="rowOne">
+              <div onclick="onNumPadClick(4)" class="keys">4</div>
+              <div onclick="onNumPadClick(5)" class="keys">5</div>
+              <div onclick="onNumPadClick(6)" class="keys">6</div>
+            </div>
+    
+            <div class="rowOne">
+              <div onclick="onNumPadClick(7)" class="keys">7</div>
+              <div onclick="onNumPadClick(8)" class="keys">8</div>
+              <div onclick="onNumPadClick(9)" class="keys">9</div>
+            </div>
+    
+            <div class="rowOne">
+              <div onclick="onNumPadClick(-1)" class="keys">CLR</div>
+              <div onclick="onNumPadClick(0)" class="keys">0</div>
+              <div onclick="" class="keys">ENTER</div>
+            </div>
+    
+            <div class="cardSlot" onclick="InsertClick()">Insert Card</div>
+          </div>
+        </div>
+        
+        <script src="app.js" async defer></script>        
+    </body>
+</html>
